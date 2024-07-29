@@ -1,0 +1,286 @@
+@import 'globals/colors', 'globals/mixins', 'globals/resets';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.938s;
+    background-color: $Very-Light-Gray;
+    margin: 0 1rem ;
+}
+
+p{
+    font-weight: 400;
+    font-size: .875rem;
+    color: $Grayish-Blue;
+}
+
+.content-wrapper{
+    height: 100vh;
+    @include flex-container(column,center,center)
+}
+
+header{
+    @include flex-container(column,center,center);
+    margin: 0 1rem;
+
+    .Title-1{
+        font-weight: 200;
+        color: $Very-Dark-Blue;
+    }
+
+    .Title-2{
+        font-weight: 600;
+        color: $Very-Dark-Blue;
+    }
+
+    .header-description{
+        text-align: center;
+        margin-top: 1rem;
+        width: 500px;
+    }
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    margin-top: 2.5rem;
+
+    section{
+        padding: 24px;
+        box-shadow: 1px 15px 18px -2px hsl(212, 86%, 64%, 0.20);
+        border-radius: 4px;
+        background-color: White;
+        max-width: 349px;
+        max-height: 280px;
+        display: flex;
+        flex-direction: column;
+
+        svg{
+            align-self: flex-end;
+            margin-top: 50px;
+        }
+
+        &.supervisor{
+            border-top: 5px solid $Cyan;
+
+            h3{
+                font-size: 1.25rem;
+                color: $Very-Dark-Blue;
+                font-weight: 700;
+            }
+
+            p{
+                margin-top: .725rem;
+                
+            }
+            
+        }
+        &.team-builder{
+            border-top: 5px solid $Red;
+            
+            h3{
+                font-size: 1.25rem;
+                color: $Very-Dark-Blue;
+                font-weight: 700;
+            }
+
+            p{
+                margin-top: .725rem;
+            }
+        }
+        &.karma{
+            border-top: 5px solid $Orange;
+            
+            h3{
+                font-size: 1.25rem;
+                color: $Very-Dark-Blue;
+                font-weight: 700;
+            }
+
+            p{
+                margin-top: .725rem;
+            }
+        }
+        &.calculator{
+            border-top: 5px solid $Blue;
+            
+            h3{
+                font-size: 1.25rem;
+                color: $Very-Dark-Blue;
+                font-weight: 700;
+            }
+
+            p{
+                margin-top: .725rem;
+            }
+        }
+
+    }
+
+    .center{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 8px 8px 0px 8px;
+    border-radius: 0px 10px 0px 0px;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: $Very-Dark-Blue;
+    color: $Very-Light-Gray;
+
+    a{
+    font-weight: 500;
+    text-decoration: none;
+    color: $Blue;
+    }
+}
+
+@media(max-width: 425px){
+    body{
+        height: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.938;
+        background-color: $Very-Light-Gray;
+        margin: 4rem 1rem;
+       
+    }
+    
+    p{
+        font-weight: 400;
+        font-size: .875rem;
+        color: $Grayish-Blue;
+    }
+    
+    .content-wrapper{
+        height: 100%;
+        @include flex-container(column,center,center);
+    }
+    
+    header{
+        @include flex-container(column,center,center);
+        margin: 1rem;
+    
+        .Title-1{
+            font-weight: 200;
+            color: $Very-Dark-Blue;
+            font-size: 1.5rem;
+        }
+    
+        .Title-2{
+            font-weight: 600;
+            color: $Very-Dark-Blue;
+            font-size: 1.5rem;
+
+        }
+    
+        .header-description{
+            text-align: center;
+            margin-top: 1rem;
+            width: 400px;
+            padding: 0 3.5rem;
+
+        }
+    }
+    
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        margin-top: 2.5rem;
+
+        .center{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        section{
+            padding: 24px;
+            box-shadow: 1px 15px 18px -2px hsl(212, 86%, 64%, 0.20);
+            border-radius: 4px;
+            background-color: White;
+            max-width: 310px;
+            min-height: 221px;
+            display: flex;
+            flex-direction: column;
+           
+    
+            svg{
+                align-self: flex-end;
+                margin-top: 50px;
+            }
+    
+            &.supervisor{
+                border-top: 5px solid $Cyan;
+    
+                h3{
+                    font-size: 1.25rem;
+                    color: $Very-Dark-Blue;
+                    font-weight: 700;
+                }
+    
+                p{
+                    margin-top: .725rem;
+                    
+                }
+                
+            }
+            &.team-builder{
+                border-top: 5px solid $Red;
+                
+                h3{
+                    font-size: 1.25rem;
+                    color: $Very-Dark-Blue;
+                    font-weight: 700;
+                }
+    
+                p{
+                    margin-top: .725rem;
+                }
+            }
+            &.karma{
+                border-top: 5px solid $Orange;
+                
+                h3{
+                    font-size: 1.25rem;
+                    color: $Very-Dark-Blue;
+                    font-weight: 700;
+                }
+    
+                p{
+                    margin-top: .725rem;
+                }
+            }
+            &.calculator{
+                border-top: 5px solid $Blue;
+                
+                h3{
+                    font-size: 1.25rem;
+                    color: $Very-Dark-Blue;
+                    font-weight: 700;
+                }
+    
+                p{
+                    margin-top: .725rem;
+                }
+            }
+        }
+    }
+}
